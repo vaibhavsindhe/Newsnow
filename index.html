@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <p>lorem*100</p>
+    <nav>
+        <div class="main-nav  container  flex">
+            <a href="#" onclick="reloade()" class="company-logo">
+                <img src="Assets/newsimage.png" alt="company logo">        <!--news logo-->
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-links nav-items" id="sport" onclick="onNavItemClick('sport')">Sports</li>
+                    <li class="hover-links nav-items" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-links nav-items" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                </ul>
+            </div>
+            <div class="tools flex">
+                <div class="dark-mode hover-links">     
+                    <span class="material-symbols-rounded">
+                        dark_mode
+                    </span>
+                </div>
+                <div class="tune hover-links">
+                    <span class="material-symbols-rounded">
+                        tune
+                    </span>
+                </div>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" id="search-text" class="news-input"  placeholder="eg : science">
+                <button id ="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+
+        <div class="tune-container ">
+            <h4>Select</h4>
+            <hr>
+            <form action="#server">
+                <h3>Language</h3>
+                <div class="languages flex"> 
+                    <div class="half ">
+                        <div>
+                            <input type="radio" name="language" class="language" id="en"/>
+                            <label for="English">English</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="language"class="language" id="hi"/>
+                            <label for="English">Hindi</label> 
+                        </div>
+                        <div>
+                            <input type="radio" name="language"class="language" id="kn"/>
+                            <label for="English">Kannada</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="language"class="language" id="gu"/>
+                            <label for="English">Gujarati</label> 
+                        </div>
+                    </div>
+                    <div class="half ">
+                        <div> 
+                            <input type="radio" name="language"class="language" id="te"/>
+                            <label for="English">Telugu</label> 
+                        </div>
+                        <div>
+                            <input type="radio" name="language"class="language" id="pa"/>
+                            <label for="English">Panjabi</label> 
+                        </div>
+                        <div>
+                            <input type="radio" name="language"class="language" id="sa"/>
+                            <label for="English">Sanskrit</label>
+                        </div>
+                    </div>
+                </div>
+                <h3>Country</h3>
+                <div class="countries ">
+                    <div>
+                        <input type="radio" name="country" class="country" id="IN"/>
+                        <label for="India">India</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="country"class="country" id="US"/>
+                        <label for="Usa">Usa</label> 
+                    </div>
+                    <div>
+                         <input type="radio" name="country"class="country" id="CA"/>
+                         <label for="Canada">Canada</label>
+                    </div>
+                </div>
+            
+                <button type="submit" class="submit">Submit</button>
+            </form>
+         </div>
+
+    </nav>
+
+    <main>
+        <div class="cards-container  container flex"  id="cards-container">
+            
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-image">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio sint accusantium adipisci maiores veritatis facilis dignissimos enim neque aliquam minima, nisi, voluptate corporis, ipsum dicta rem quod inventore laboriosam minus?</p>
+            </div>
+        </div>
+    </template>
+
+    <div class="tune-container ">
+        <h4>Select</h4>
+        <hr>
+        <form action="#server">
+            <h3>Language</h3>
+            <div class="languages flex"> 
+                <div class="half ">
+                    <div>
+                        <input type="radio" name="language" class="language" id="en"/>
+                        <label for="English">English</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="language"class="language" id="hi"/>
+                        <label for="English">Hindi</label> 
+                    </div>
+                    <div>
+                        <input type="radio" name="language"class="language" id="kn"/>
+                        <label for="English">Kannada</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="language"class="language" id="gu"/>
+                        <label for="English">Gujarati</label> 
+                    </div>
+                </div>
+                <div class="half ">
+                    <div> 
+                        <input type="radio" name="language"class="language" id="te"/>
+                        <label for="English">Telugu</label> 
+                    </div>
+                    <div>
+                        <input type="radio" name="language"class="language" id="pa"/>
+                        <label for="English">Panjabi</label> 
+                    </div>
+                    <div>
+                        <input type="radio" name="language"class="language" id="sa"/>
+                        <label for="English">Sanskrit</label>
+                    </div>
+                </div>
+            </div>
+            <h3>Country</h3>
+            <div class="countries ">
+                <div>
+                    <input type="radio" name="country" class="country" id="IN"/>
+                    <label for="India">India</label>
+                </div>
+                <div>
+                    <input type="radio" name="country"class="country" id="US"/>
+                    <label for="Usa">Usa</label> 
+                </div>
+                <div>
+                     <input type="radio" name="country"class="cosuntry" id="CA"/>
+                     <label for="Canada">Canada</label>
+                </div>
+            </div>
+        
+            <button type="submit" class="submit">Submit</button>
+        </form>
+     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script> 
+    <script src="app.js"></script>
+</body>
+</html>
